@@ -6,6 +6,8 @@ import java.util.HashMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -27,8 +29,16 @@ public class MyPageController {
 	public String list(Model model) {
 		log.info("@# myPage");
 		
-		ArrayList<MyPageDTO> list = service.list();
-		model.addAttribute("MyPage", list);
+		ArrayList<MyPageDTO> list1 = service.list1();
+		model.addAttribute("list1", list1);
+
+		ArrayList<MyPageDTO> list_cv = service.list_cv();
+		model.addAttribute("list_cv", list_cv);
+
+		ArrayList<MyPageDTO> list_apply = service.list_apply();
+		model.addAttribute("list_apply", list_apply);
+		
+		
 		
 		return "myPage";
 	}
@@ -42,12 +52,21 @@ public class MyPageController {
 		
 		return "redirect:myPage";
 	}
+	@RequestMapping("/cancle")
+	public String cancle(Model model) {
+		log.info("@# cancle");
+		
+		ArrayList<MyPageDTO> list1 = service.list1();
+		model.addAttribute("list", list1);
+		
+		return "redirect:myPage";
+	}
 	@RequestMapping("/resume")
 	public String resume(Model model) {
 		log.info("@# resume");
 		
-		ArrayList<MyPageDTO> list = service.list();
-		model.addAttribute("list", list);
+		ArrayList<MyPageDTO> list_cv = service.list_cv();
+		model.addAttribute("list", list_cv);
 		
 		return "resume";
 	}
@@ -56,8 +75,8 @@ public class MyPageController {
 	public String resume_edit(Model model) {
 		log.info("@# resume_edit");
 		
-		ArrayList<MyPageDTO> list = service.list();
-		model.addAttribute("list", list);
+		ArrayList<MyPageDTO> list1 = service.list1();
+		model.addAttribute("list1", list1);
 		
 		return "resume_edit";
 	}

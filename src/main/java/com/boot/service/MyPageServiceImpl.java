@@ -18,16 +18,36 @@ public class MyPageServiceImpl implements MyPageService{
 	@Autowired
 	private SqlSession sqlSession;
 	
+	
 	@Override
-	public ArrayList<MyPageDTO> list() {
-		log.info("@# MyPageServiceImpl list");
+	public ArrayList<MyPageDTO> list1() {
+		log.info("@# MyPageServiceImpl list1");
 		
 		MyPageDAO dao = sqlSession.getMapper(MyPageDAO.class);
-		ArrayList<MyPageDTO> list=dao.list();
+		ArrayList<MyPageDTO> list1=dao.list1();
+		
+		return list1;
+	}
+
+	@Override
+	public ArrayList<MyPageDTO> list_cv() {
+		log.info("@# MyPageServiceImpl list_cv");
+		
+		MyPageDAO dao = sqlSession.getMapper(MyPageDAO.class);
+		ArrayList<MyPageDTO> list=dao.list_cv();
 		
 		return list;
 	}
-
+	
+	@Override
+	public ArrayList<MyPageDTO> list_apply() {
+		log.info("@# MyPageServiceImpl list_apply");
+		
+		MyPageDAO dao = sqlSession.getMapper(MyPageDAO.class);
+		ArrayList<MyPageDTO> list=dao.list_apply();
+		
+		return list;
+	}
 
 	@Override
 	public MyPageDTO contentView(HashMap<String, String> param) {
@@ -56,6 +76,9 @@ public class MyPageServiceImpl implements MyPageService{
 		
 		dao.delete(param);
 	}
+
+
+	
 
 }
 
