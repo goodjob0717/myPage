@@ -226,6 +226,21 @@
 .cont_apply_li:hover{
 	background: #AFDBF5;
 }
+.cont_apply_li_right_wrap{
+	float:right;
+	width:50%;
+	padding-top:35px;
+}
+.apply_button{
+	float:right;
+	margin-right: 10%;
+	font-size: 20px;
+	width: 100px;
+	height: 40px;
+	background-color: aliceblue;
+	text-align: center;
+	padding-top:1% ;
+}
 
 /* ==============================================================*/
 

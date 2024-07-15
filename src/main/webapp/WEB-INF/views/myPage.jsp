@@ -9,7 +9,7 @@
     <title>mypage</title>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/main.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/myPage.css">
 </head>
 <body>
     <div id="wrap">

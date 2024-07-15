@@ -7,7 +7,7 @@
 <title>구인구직 홈페이지</title>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.js"></script>
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/main3.css' />">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/main1.css' />">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/main2.css' />">
 
 <script>
